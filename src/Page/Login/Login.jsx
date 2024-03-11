@@ -3,25 +3,39 @@ import img from '../../assets/images/login/login.svg'
 import { useContext } from 'react';
 import { AuthContext } from '../../Providers/Providers';
 import {  useLocation, useNavigate } from 'react-router-dom';
+import { Axios } from 'axios';
+import axios from 'axios';
+
+
 
 const Login = () => {
    
     const { signIn } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
-    console.log(location)
+    // console.log(location)
 
     const handleLogin = event => {
         event.preventDefault();
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(form, email, password)
+        // console.log(form, email, password)
 
         signIn(email, password)
         .then(result => {
-            const user = result.user;
-            console.log('Login Zurich user', user)
+            const loggedInUser = result.user;
+            
+            console.log('Login Zurich user', loggedInUser);
+            const user= {email};
+            //get access token
+        axios.post('http://localhost:5000/jwt', user, {withCredentials: true})
+            .then(res =>{
+                console.log(res.data)
+                if(res.data.success){
+                    navigate(location?.state ? location?.state : '/' )
+                }
+            })
         })
         .catch(error => console.log(error))
        
@@ -47,7 +61,7 @@ const Login = () => {
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="text" name='password' placeholder="password" className="input input-bordered" />
+                                <input type="password" name='password' placeholder="password" className="input input-bordered" />
                                 <label className="label">
                                     <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                                 </label>

@@ -23,11 +23,11 @@ const Navbar = () => {
     {
       user?.email ? <> 
       
-      <li> <Link to="/booking">My Bookings: </Link> </li>       
-      <li> <button onClick={handleLogout} >Log out </button> </li>
+      <li> <Link to="/booking">My Bookings </Link> </li>   
+      
       </>
        :
-        <li> <Link to="/login">Login</Link> </li>
+        <li> <Link to='/register'>Appointment</Link> </li>
     }
 
   </>
@@ -53,12 +53,12 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end font-bold">
-        {/* {
+        {
           user?.email ? <button onClick={handleLogout} className="btn btn-outline btn-warning">Logout</button> :
 
-            } */}
+            
             <Link to="/login" >  <button className="btn btn-outline btn-success font-bold">Login</button> </Link>
-
+        }
       
 
       </div>
