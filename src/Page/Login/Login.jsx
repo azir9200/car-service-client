@@ -3,7 +3,6 @@ import img from '../../assets/images/login/login.svg'
 import { useContext } from 'react';
 import { AuthContext } from '../../Providers/Providers';
 import {  useLocation, useNavigate } from 'react-router-dom';
-import { Axios } from 'axios';
 import axios from 'axios';
 
 
