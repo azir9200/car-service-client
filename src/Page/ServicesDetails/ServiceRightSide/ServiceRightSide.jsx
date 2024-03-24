@@ -1,3 +1,4 @@
+import Download from "../Download/Download";
 
 
 const ServiceRightSide = () => {
@@ -20,7 +21,7 @@ const ServiceRightSide = () => {
       <div className='p-2 hover:bg-red-500 shadow-xl rounded-xl'>
         <p>Automatic Services</p>
       </div>
-     
+     <Download></Download>
     </div>
   );
 };

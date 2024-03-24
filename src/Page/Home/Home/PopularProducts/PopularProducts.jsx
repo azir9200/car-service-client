@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import img1 from '../../../../assets/images/products/1.png'
 import img2 from '../../../../assets/images/products/2.png'
 import img3 from '../../../../assets/images/products/3.png'
@@ -124,7 +125,8 @@ const PopularProducts = () => {
 
 
  <p className='text-center mx-auto p-8'>  
-  <button className="btn btn-outline btn-primary mx-auto">More Products</button>
+ <Link to='/services' > 
+  <button className="btn btn-outline btn-primary mx-auto">More Products</button>  </Link>
   </p>
 
 

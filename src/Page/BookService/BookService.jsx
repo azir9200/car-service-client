@@ -39,7 +39,9 @@ const BookService = () => {
             if(data.insertedId){
                 alert('service book successfully')
             }
+            
         })
+        .then('/')
 
     }
 
