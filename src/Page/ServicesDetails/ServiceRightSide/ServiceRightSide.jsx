@@ -1,4 +1,5 @@
 import Download from "../Download/Download";
+import Special from "../Special/Special";
 
 
 const ServiceRightSide = () => {
@@ -22,6 +23,7 @@ const ServiceRightSide = () => {
         <p>Automatic Services</p>
       </div>
      <Download></Download>
+     <Special></Special>
     </div>
   );
 };

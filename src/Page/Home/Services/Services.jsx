@@ -14,7 +14,7 @@ const [services, setServices] = useState([]);
   return (
     <div className="mt-4">
       <div className="text-center" >
-        {/* <p> total.. {services.length} </p> */}
+        <p> total.. {services.length} </p>
         <div className="text-5xl font-bold">Our Service Area</div>
 
         <p className="text-xl" >the majority have suffered alteration in some form, by injected humour, or randomised words which do not look even slightly believable. </p>
